@@ -21,6 +21,7 @@ return {
 						end,
 					},
 					"diagnostics",
+					"filename",
 				},
 				lualine_c = { "searchcount" },
 				lualine_x = {
