@@ -38,6 +38,7 @@
   "rose-pine": { "branch": "main", "commit": "dded5c15e9d27ac95ad1e803b35a752d80f3f42b" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "cf48d4dfce44e0b9a2e19a008d6ec6ea6f01a83b" },
   "telescope.nvim": { "branch": "0.1.x", "commit": "a0bbec21143c7bc5f8bb02e0005fa0b982edc026" },
+  "tiny-inline-diagnostic.nvim": { "branch": "main", "commit": "c9e8f98dbbb20c41716496bf37f69d29d3c91263" },
   "todo-comments.nvim": { "branch": "main", "commit": "d0d72392c3b0d4c9e3002ecfc509c6b2626a22fb" },
   "tokyonight.nvim": { "branch": "main", "commit": "ee612bf60608376d877c883eca641d87da9bd486" },
   "trouble.nvim": { "branch": "main", "commit": "5273137d903a7d6035b5fc0ef503ee51e69ad0ee" },
