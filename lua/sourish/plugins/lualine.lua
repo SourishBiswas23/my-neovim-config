@@ -3,7 +3,7 @@ return {
 	dependencies = { "DaikyXendo/nvim-material-icon" },
 	config = function()
 		local lualine = require("lualine")
-		local lazy_status = require("lazy.status")
+		-- local lazy_status = require("lazy.status")
 		lualine.setup({
 			options = {
 				theme = "nightfly",
@@ -16,25 +16,28 @@ return {
 					"branch",
 					{
 						"diff",
-						cond = function()
-							return vim.b.gitsigns_head ~= nil
-						end,
+						always_visible = false,
 					},
-					"diagnostics",
-					"filename",
-				},
-				lualine_c = { "searchcount" },
-				lualine_x = {
 					{
-						lazy_status.updates,
-						cond = lazy_status.has_updates,
-						color = { fg = "#ff9e64" },
+						"diagnostics",
+						sources = { "nvim_diagnostic" },
+						sections = { "error", "warn", "info", "hint" },
+						-- symbols = { error = "E:", warn = "W:", info = "I:", hint = "H:" },
+						colored = true,
+						update_in_insert = false,
+						always_visible = false,
 					},
-					{ "encoding" },
-					{ "fileformat" },
-					{ "filetype" },
+					{ "filename", path = 1 },
 				},
-				lualine_y = { "progress" },
+				lualine_c = {},
+				lualine_x = {
+					-- {
+					-- 	lazy_status.updates,
+					-- 	cond = lazy_status.has_updates,
+					-- 	color = { fg = "#ff9e64" },
+					-- },
+				},
+				lualine_y = { { "encoding" }, { "filetype" }, { "progress" } },
 				lualine_z = { "location" },
 			},
 		})
