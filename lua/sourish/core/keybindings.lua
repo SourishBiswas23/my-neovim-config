@@ -31,4 +31,4 @@ keymap.set({ "n", "i", "v" }, "<C-s>", function()
 	if vim.fn.mode() == "i" then
 		vim.cmd("stopinsert")
 	end
-end, { noremap = true, silent = true })
+end, { desc = "Save file", noremap = true, silent = true })
