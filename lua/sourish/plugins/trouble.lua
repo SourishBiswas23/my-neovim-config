@@ -6,7 +6,7 @@ return {
 	keys = {
 		{
 			"<leader>td",
-			"<cmd>Trouble diagnostics toggle<cr>",
+			"<cmd>Trouble diagnostics toggle focus=true<cr>",
 			desc = "Diagnostics (Trouble)",
 		},
 		{
@@ -16,12 +16,12 @@ return {
 		},
 		{
 			"<leader>ts",
-			"<cmd>Trouble symbols toggle focus=false<cr>",
+			"<cmd>Trouble symbols toggle focus=true<cr>",
 			desc = "Symbols (Trouble)",
 		},
 		{
 			"<leader>tl",
-			"<cmd>Trouble lsp toggle focus=false win.position=right<cr>",
+			"<cmd>Trouble lsp toggle focus=true win.position=right<cr>",
 			desc = "LSP Definitions / references / ... (Trouble)",
 		},
 		{
