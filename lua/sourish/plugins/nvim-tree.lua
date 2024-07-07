@@ -5,6 +5,7 @@ return {
 		local nvimtree = require("nvim-tree")
 
 		-- recommended settings from nvim-tree documentation
+		-- disable netrw
 		vim.g.loaded_netrw = 1
 		vim.g.loaded_netrwPlugin = 1
 
@@ -22,17 +23,24 @@ return {
 			},
 			-- change folder arrow icons
 			renderer = {
+				special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md", ".gitignore" },
 				indent_markers = {
 					enable = true,
 				},
-				-- icons = {
-				-- 	glyphs = {
-				-- 		folder = {
-				-- 			arrow_closed = "", -- arrow when folder is closed
-				-- 			arrow_open = "", -- arrow when folder is open
-				-- 		},
-				-- 	},
-				-- },
+				highlight_git = "icon",
+				highlight_diagnostics = "name",
+				highlight_modified = "icon",
+				icons = {
+					git_placement = "before",
+					modified_placement = "signcolumn",
+				},
+			},
+			diagnostics = {
+				enable = true,
+				show_on_dirs = true,
+			},
+			modified = {
+				enable = true,
 			},
 			-- disable window_picker for
 			-- explorer to work well with
