@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
-keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+keymap.set("n", "<leader>/", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
@@ -21,12 +21,9 @@ keymap.set("v", "j", "gj")
 keymap.set("v", "k", "gk")
 
 -- background picker
-keymap.set(
-	"n",
-	"<leader>fb",
-	':lua require("sourish/scripts/colorscheme-picker").find_background()<CR>',
-	{ desc = "Select background" }
-)
+keymap.set("n", "<leader>fb", function()
+	require("sourish.scripts.colorscheme-picker").find_background()
+end, { desc = "Select background" })
 
 -- Save file using Ctrl+S in all modes and go to normal mode after saving in insert mode
 keymap.set({ "n", "i", "v" }, "<C-s>", function()
