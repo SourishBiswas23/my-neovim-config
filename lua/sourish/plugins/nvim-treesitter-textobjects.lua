@@ -7,7 +7,7 @@ return {
 			textobjects = {
 				select = {
 					enable = true,
-
+					-- a:outer i:inner l:left and loop f:function r:right =:assignment m:method c:class n:next p:previous
 					-- Automatically jump forward to textobj, similar to targets.vim
 					lookahead = true,
 					keymaps = {
@@ -45,12 +45,12 @@ return {
 				swap = {
 					enable = true,
 					swap_next = {
-						["<leader>na"] = "@parameter.inner", -- swap parameters/argument with next
-						["<leader>nm"] = "@function.outer", -- swap function with next
+						["<leader>na"] = { "@parameter.inner", desc = "swap parameters/argument with next" },
+						["<leader>nm"] = { "@function.outer", desc = "swap function with next" },
 					},
 					swap_previous = {
-						["<leader>pa"] = "@parameter.inner", -- swap parameters/argument with prev
-						["<leader>pm"] = "@function.outer", -- swap function with previous
+						["<leader>pa"] = { "@parameter.inner", desc = "swap parameters/argument with prev" },
+						["<leader>pm"] = { "@function.outer", desc = "swap function with previous" },
 					},
 				},
 				move = {
