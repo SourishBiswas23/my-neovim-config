@@ -34,6 +34,7 @@ return {
 				"lua_ls",
 				"emmet_ls",
 				"prismals",
+				"bashls",
 			},
 		})
 
@@ -43,6 +44,9 @@ return {
 				"stylua",
 				-- 'pylint',
 				"eslint_d",
+				-- bash linter and formatter
+				"shellcheck",
+				"shfmt",
 			},
 		})
 	end,
