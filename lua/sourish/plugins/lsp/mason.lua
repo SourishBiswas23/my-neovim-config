@@ -36,6 +36,7 @@ return {
 				"prismals",
 				"bashls",
 				"jsonls",
+				"eslint",
 			},
 		})
 
@@ -44,7 +45,7 @@ return {
 				"prettierd",
 				"stylua",
 				-- 'pylint',
-				"eslint_d",
+				-- "eslint_d",
 				-- bash linter and formatter
 				"shellcheck",
 				"shfmt",

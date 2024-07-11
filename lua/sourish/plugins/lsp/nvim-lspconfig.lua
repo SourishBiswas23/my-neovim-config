@@ -149,6 +149,12 @@ return {
 					filetypes = { "sh", "bash" },
 				})
 			end,
+			["jsonls"] = function()
+				lspconfig["jsonls"].setup({
+					capabilities = capabilities,
+					filetypes = { "json", "jsonc" },
+				})
+			end,
 			["eslint"] = function()
 				lspconfig["eslint"].setup({
 					capabilities = capabilities,
