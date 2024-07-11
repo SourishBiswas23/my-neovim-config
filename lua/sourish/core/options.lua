@@ -38,9 +38,6 @@ opt.cursorline = true -- Highlight the line where cursor is located
 -- opt.background = "dark"    -- Colorschemes with dark version will be made dark
 opt.termguicolors = true -- Enable 24-bit RGB color in the terminal
 
--- Remove the virtual text
-vim.diagnostic.config({ virtual_text = false })
-
 -- Restore cursor position when file is opened
 api.nvim_create_autocmd("BufReadPost", {
 	pattern = "*",
