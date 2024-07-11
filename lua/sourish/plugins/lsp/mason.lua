@@ -35,6 +35,7 @@ return {
 				"emmet_ls",
 				"prismals",
 				"bashls",
+				"jsonls",
 			},
 		})
 
