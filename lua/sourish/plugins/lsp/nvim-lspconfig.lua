@@ -149,6 +149,32 @@ return {
 					filetypes = { "sh", "bash" },
 				})
 			end,
+			["eslint"] = function()
+				lspconfig["eslint"].setup({
+					capabilities = capabilities,
+					on_attach = function(client, bufnr)
+						vim.api.nvim_create_autocmd("BufWritePre", {
+							buffer = bufnr,
+							command = "EslintFixAll",
+						})
+					end,
+					settings = {
+						workingDirectory = { mode = "auto" },
+						format = true,
+						-- You can add more ESLint-specific settings here if needed
+					},
+					filetypes = {
+						"javascript",
+						"javascriptreact",
+						"javascript.jsx",
+						"typescript",
+						"typescriptreact",
+						"typescript.tsx",
+						"vue",
+						"svelte",
+					},
+				})
+			end,
 		})
 	end,
 }
