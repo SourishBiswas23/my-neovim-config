@@ -77,3 +77,15 @@ api.nvim_create_autocmd("BufWinEnter", {
 		end
 	end,
 })
+
+-- Create an autocmd group for yank highlighting
+local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
+
+-- Create an autocmd to highlight on yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = highlight_group,
+	pattern = "*",
+	callback = function()
+		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 200 })
+	end,
+})
