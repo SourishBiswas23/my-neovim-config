@@ -4,6 +4,8 @@ return {
 	priority = 1000,
 	config = function()
 		local dracula = require("dracula")
-		dracula.setup({})
+		dracula.setup({
+			transparent = true,
+		})
 	end,
 }
