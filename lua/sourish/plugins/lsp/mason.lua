@@ -37,6 +37,7 @@ return {
 				"bashls",
 				"jsonls",
 				"eslint",
+				"clangd",
 			},
 		})
 
@@ -49,6 +50,9 @@ return {
 				-- bash linter and formatter
 				"shellcheck",
 				"shfmt",
+				-- c and cpp linter and formatter
+				"cpplint",
+				"clang-format",
 			},
 		})
 	end,

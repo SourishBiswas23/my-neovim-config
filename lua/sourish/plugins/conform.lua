@@ -21,6 +21,8 @@ return {
 				lua = { "stylua" },
 				sh = { "shfmt" },
 				bash = { "shfmt" },
+				c = { "clang-format" },
+				cpp = { "clang-format" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

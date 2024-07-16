@@ -48,10 +48,10 @@ return {
 				keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
 				opts.desc = "Show buffer diagnostics"
-				keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+				keymap.set("n", "<leader>bd", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
 
 				opts.desc = "Show line diagnostics"
-				keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+				keymap.set("n", "<leader>ld", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
 				opts.desc = "Go to previous diagnostic"
 				keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
@@ -179,6 +179,12 @@ return {
 						"vue",
 						"svelte",
 					},
+				})
+			end,
+			["clangd"] = function()
+				lspconfig["clangd"].setup({
+					capabilities = capabilities,
+					filetypes = { "c", "cpp", "objc", "objcpp" },
 				})
 			end,
 		})
