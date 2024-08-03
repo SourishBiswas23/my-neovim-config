@@ -123,6 +123,7 @@ return {
 						"scss",
 						"less",
 						"svelte",
+						"vue",
 					},
 				})
 			end,
