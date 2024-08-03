@@ -38,6 +38,7 @@ return {
 				"jsonls",
 				"eslint",
 				"clangd",
+				"vuels",
 			},
 		})
 
