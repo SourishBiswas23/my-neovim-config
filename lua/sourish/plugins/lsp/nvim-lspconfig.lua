@@ -188,6 +188,37 @@ return {
 					filetypes = { "c", "cpp", "objc", "objcpp" },
 				})
 			end,
+			["tsserver"] = function()
+				local mason_registry = require("mason-registry")
+				local vue_language_server_path = mason_registry.get_package("vue-language-server"):get_install_path()
+					.. "/node_modules/@vue/language-server"
+
+				lspconfig["tsserver"].setup({
+					capabilities = capabilities,
+					init_options = {
+						plugins = {
+							{
+								name = "@vue/typescript-plugin",
+								location = vue_language_server_path,
+								languages = { "vue" },
+							},
+						},
+					},
+					filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+				})
+			end,
+			-- https://github.com/vuejs/language-tools?tab=readme-ov-file#hybrid-mode-configuration-requires-vuelanguage-server-version-200
+			-- ["volar"] = function()
+			-- 	lspconfig["volar"].setup({
+			-- 		capabilities = capabilities,
+			-- 		filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+			-- 		init_options = {
+			-- 			vue = {
+			-- 				hybridMode = false,
+			-- 			},
+			-- 		},
+			-- 	})
+			-- end,
 		})
 	end,
 }
