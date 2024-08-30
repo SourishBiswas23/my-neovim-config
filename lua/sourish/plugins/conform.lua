@@ -24,6 +24,7 @@ return {
 				bash = { "shfmt" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
+				python = { "black" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

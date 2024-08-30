@@ -39,6 +39,7 @@ return {
 				"eslint",
 				"clangd",
 				"volar",
+				"pyright",
 			},
 		})
 
@@ -54,6 +55,9 @@ return {
 				-- c and cpp linter and formatter
 				"cpplint",
 				"clang-format",
+				-- python formatter and linter
+				"black",
+				"flake8",
 			},
 		})
 	end,
