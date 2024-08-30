@@ -1,3 +1,8 @@
+-- disable bufferline
+if true then
+	return {}
+end
+
 return {
 	"akinsho/bufferline.nvim",
 	event = "VeryLazy",
