@@ -26,13 +26,13 @@ return {
 		require("luasnip.loaders.from_vscode").lazy_load()
 
 		cmp.setup({
-			-- debounce time for 55 wpm
+			-- debounce time for 60 wpm
 			performance = {
-				debounce = 400,
-				throttle = 200,
-				fetching_timeout = 500,
-				confirm_resolve_timeout = 400,
-				async_budget = 10,
+				debounce = 300,
+				throttle = 150,
+				fetching_timeout = 400,
+				confirm_resolve_timeout = 300,
+				async_budget = 8,
 				max_view_entries = 100,
 			},
 			completion = {
