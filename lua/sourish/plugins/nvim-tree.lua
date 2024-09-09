@@ -24,39 +24,73 @@ return {
 			-- change folder arrow icons
 			renderer = {
 				special_files = { "Cargo.toml", "Makefile", "README.md", "readme.md", ".gitignore" },
+
+				-- Enable indent markers for a similar folder structure appearance
 				indent_markers = {
 					enable = true,
 				},
-				highlight_git = "icon",
+
+				-- Highlight settings
+				highlight_git = true,
 				highlight_diagnostics = "name",
-				highlight_modified = "icon",
+				highlight_modified = "name",
+
+				-- VS Code-like icons configuration
 				icons = {
-					git_placement = "before",
-					modified_placement = "signcolumn",
-				},
-			},
-			diagnostics = {
-				enable = true,
-				show_on_dirs = true,
-			},
-			modified = {
-				enable = true,
-			},
-			-- disable window_picker for
-			-- explorer to work well with
-			-- window splits
-			actions = {
-				open_file = {
-					window_picker = {
-						enable = false,
+					show = {
+						folder = true,
+						file = true,
+						git = true,
+						folder_arrow = true,
+					},
+					glyphs = {
+						default = "", -- VS Code-style icon for files
+						symlink = "", -- VS Code-style icon for symlinks
+						bookmark = "",
+						folder = {
+							default = "", -- Closed folder icon
+							open = "", -- Open folder icon
+							empty = "", -- Empty closed folder icon
+							empty_open = "", -- Empty open folder icon
+							symlink = "", -- Symlink folder icon
+							symlink_open = "",
+						},
+						git = {
+							unstaged = "✗",
+							staged = "✓",
+							unmerged = "",
+							renamed = "➜",
+							untracked = "★",
+							deleted = "",
+							ignored = "◌",
+						},
 					},
 				},
 			},
-			filters = {
-				custom = { ".DS_Store" },
+
+			diagnostics = {
+				enable = true,
+				show_on_dirs = true, -- Show diagnostics on directories
 			},
+
+			modified = {
+				enable = true, -- Show modified indicators
+			},
+
+			actions = {
+				open_file = {
+					window_picker = {
+						enable = false, -- Disable window picker for better splits management
+					},
+				},
+			},
+
+			filters = {
+				custom = { ".DS_Store" }, -- Exclude custom files/directories
+			},
+
 			git = {
-				ignore = false,
+				ignore = false, -- Show git-ignored files
 			},
 		})
 
