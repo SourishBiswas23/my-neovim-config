@@ -12,7 +12,7 @@ keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 keymap.set("n", "<leader>sc", "<cmd>close<CR>", { desc = "Close current split" })
 
 -- buffer management see bufferline.lua for more bindings
-keymap.set("n", "<leader>x", "<cmd>bd<CR>", { desc = "Close current buffer" })
+keymap.set("n", "<leader>x", "<cmd>BufferClose<CR>", { desc = "Close current buffer" })
 
 -- Remap 'j' and 'k' to handle wrapped lines in both normal and visual modes
 keymap.set("n", "j", "gj")
