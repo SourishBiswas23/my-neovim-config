@@ -55,6 +55,8 @@ return {
 				-- c and cpp linter and formatter
 				"cpplint",
 				"clang-format",
+				-- tailwind formatter
+				"rustywind",
 				-- python formatter and linter
 				"black",
 				"flake8",

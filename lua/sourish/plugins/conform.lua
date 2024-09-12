@@ -8,10 +8,10 @@ return {
 			formatters_by_ft = {
 				javascript = { "prettierd" },
 				typescript = { "prettierd" },
-				javascriptreact = { "prettierd" },
-				typescriptreact = { "prettierd" },
+				javascriptreact = { "prettierd", "rustywind" },
+				typescriptreact = { "prettierd", "rustywind" },
 				svelte = { "prettierd" },
-				vue = { "prettierd" },
+				vue = { "prettierd", "rustywind" },
 				css = { "prettierd" },
 				html = { "prettierd" },
 				json = { "prettierd" },
