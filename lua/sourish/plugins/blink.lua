@@ -38,6 +38,7 @@ return {
 		windows = {
 			autocomplete = {
 				border = "single",
+				max_height = 15,
 			},
 			documentation = {
 				border = "single",
