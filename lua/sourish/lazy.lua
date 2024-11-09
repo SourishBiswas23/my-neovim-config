@@ -18,6 +18,9 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup(
 	{ { import = "sourish.plugins" }, { import = "sourish.plugins.lsp" }, { import = "sourish.plugins.colorschemes" } },
 	{
+		ui = {
+			border = "single",
+		},
 		checker = {
 			enabled = true,
 			notify = false,
