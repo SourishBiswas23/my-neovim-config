@@ -1,3 +1,8 @@
+-- blink.lua is being used in favour of this
+if true then
+	return {}
+end
+
 return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
@@ -93,6 +98,7 @@ return {
 				{ name = "luasnip" }, -- snippets
 				{ name = "buffer" }, -- text within current buffer
 				{ name = "path" }, -- file system paths
+				{ name = "nvim_lsp_signature_help" },
 			}),
 
 			-- configure lspkind for vs-code like pictograms in completion menu
