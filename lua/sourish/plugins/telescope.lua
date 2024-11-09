@@ -16,9 +16,11 @@ return {
 				path_display = { "smart" },
 				mappings = {
 					i = {
-						["<C-k>"] = actions.move_selection_previous, -- move to prev result
-						["<C-j>"] = actions.move_selection_next, -- move to next result
+						["<S-Tab>"] = actions.move_selection_previous, -- move to prev result
+						["<Tab>"] = actions.move_selection_next, -- move to next result
 						["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+						["<C-p>"] = actions.toggle_selection + actions.move_selection_previous, -- move to prev result
+						["<C-n>"] = actions.toggle_selection + actions.move_selection_next, -- move to next result
 					},
 				},
 			},
