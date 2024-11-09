@@ -3,7 +3,6 @@ return {
 	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		{ "saghen/blink.cmp" },
-		{ "folke/neodev.nvim", opts = {} },
 	},
 	config = function()
 		-- import lspconfig plugin
@@ -123,23 +122,23 @@ return {
 					},
 				})
 			end,
-			["lua_ls"] = function()
-				-- configure lua server (with special settings)
-				lspconfig["lua_ls"].setup({
-					capabilities = capabilities,
-					settings = {
-						Lua = {
-							-- make the language server recognize "vim" global
-							diagnostics = {
-								globals = { "vim" },
-							},
-							completion = {
-								callSnippet = "Replace",
-							},
-						},
-					},
-				})
-			end,
+			-- ["lua_ls"] = function()
+			-- 	-- configure lua server (with special settings)
+			-- 	lspconfig["lua_ls"].setup({
+			-- 		capabilities = capabilities,
+			-- 		settings = {
+			-- 			Lua = {
+			-- 				-- make the language server recognize "vim" global
+			-- 				diagnostics = {
+			-- 					globals = { "vim" },
+			-- 				},
+			-- 				completion = {
+			-- 					callSnippet = "Replace",
+			-- 				},
+			-- 			},
+			-- 		},
+			-- 	})
+			-- end,
 			["bashls"] = function()
 				lspconfig["bashls"].setup({
 					capabilities = capabilities,
