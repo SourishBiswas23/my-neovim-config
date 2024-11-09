@@ -28,9 +28,9 @@ return {
 		},
 		keymap = {
 			preset = "default",
-			["<CR>"] = { "accept" },
-			["<Tab>"] = { "select_next", "snippet_forward" },
-			["<S-Tab>"] = { "select_prev", "snippet_backward" },
+			["<CR>"] = { "accept", "fallback" },
+			["<Tab>"] = { "select_next", "snippet_forward", "fallback" },
+			["<S-Tab>"] = { "select_prev", "snippet_backward", "fallback" },
 		},
 
 		windows = {
