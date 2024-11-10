@@ -19,7 +19,7 @@ require("lazy").setup(
 	{ { import = "sourish.plugins" }, { import = "sourish.plugins.lsp" }, { import = "sourish.plugins.colorschemes" } },
 	{
 		ui = {
-			border = "single",
+			border = "rounded",
 		},
 		checker = {
 			enabled = true,

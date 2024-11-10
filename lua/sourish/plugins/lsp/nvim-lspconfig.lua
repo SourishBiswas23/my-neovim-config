@@ -5,7 +5,7 @@ return {
 		{ "saghen/blink.cmp" },
 	},
 	config = function()
-		local _border = "single"
+		local _border = "rounded"
 
 		vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
 			border = _border,

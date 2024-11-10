@@ -37,16 +37,16 @@ return {
 
 		windows = {
 			autocomplete = {
-				border = "single",
+				border = "rounded",
 				max_height = 15,
 			},
 			documentation = {
-				border = "single",
+				border = "rounded",
 				auto_show = true,
 				auto_show_delay_ms = 50,
 			},
 			signature_help = {
-				border = "single",
+				border = "rounded",
 			},
 		},
 
