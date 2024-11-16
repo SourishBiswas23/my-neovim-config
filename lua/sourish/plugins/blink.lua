@@ -1,3 +1,8 @@
+-- nvim-cmp is being used in favour of these
+if true then
+	return {}
+end
+
 return {
 	"saghen/blink.cmp",
 	event = { "InsertEnter" },

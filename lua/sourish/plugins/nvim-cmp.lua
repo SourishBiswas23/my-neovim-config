@@ -1,8 +1,3 @@
--- blink.lua is being used in favour of this
-if true then
-	return {}
-end
-
 return {
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
@@ -47,6 +42,10 @@ return {
 				expand = function(args)
 					luasnip.lsp_expand(args.body)
 				end,
+			},
+			window = {
+				completion = cmp.config.window.bordered(),
+				documentation = cmp.config.window.bordered(),
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
